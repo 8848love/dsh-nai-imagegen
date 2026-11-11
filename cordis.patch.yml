@@ -1,0 +1,3 @@
+- insert:
+    - id: nai-imagegen
+      name: 'dsh-nai-imagegen'

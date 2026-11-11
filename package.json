@@ -1,0 +1,62 @@
+{
+  "name": "dsh-nai-imagegen",
+  "description": "NovelAI 文生图插件：侧栏面板管理凭据与默认参数，宿主半侧注册 nai_* 工具直连 NovelAI 图像 API，出图落盘后由 Agent 在正文里内联显示。",
+  "version": "1.0.0",
+  "private": false,
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/8848love/dsh-nai-imagegen.git",
+    "directory": "plugins/dsh-nai-imagegen"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "client.js",
+    "index.js",
+    "lib/",
+    "config.example.json",
+    "cordis.patch.yml",
+    "install.mjs",
+    "bootstrap.mjs",
+    "publish.mjs",
+    "launch-with-proxy.cmd",
+    "import-artists.mjs",
+    "README-install.md",
+    "GET-FROM-GIT.md",
+    "README-comic.md",
+    "NOVELAI-SUBSCRIPTION-QUOTA.md",
+    "CHANGELOG.md",
+    "ROLLBACK.md",
+    "AGENTS.md",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-slots"
+      ]
+    }
+  },
+  "scripts": {
+    "verify": "node tests/verify.mjs",
+    "bootstrap": "node bootstrap.mjs",
+    "publish:check": "node publish.mjs --message \"预演\"",
+    "publish": "node publish.mjs --apply --message \"更新 dsh-nai-imagegen\"",
+    "install:profile": "node install.mjs",
+    "install:profile:apply": "node install.mjs --apply",
+    "uninstall:profile": "node install.mjs --uninstall --apply"
+  }
+}

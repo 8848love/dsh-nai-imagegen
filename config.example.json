@@ -1,0 +1,65 @@
+{
+  "baseUrl": "https://image.novelai.net",
+  "token": "",
+  "model": "nai-diffusion-5-full",
+  "width": 832,
+  "height": 1216,
+  "steps": 28,
+  "scale": 5,
+  "sampler": "k_euler_ancestral",
+  "ucPreset": 3,
+  "negativePrompt": "",
+  "maxImagesPerCall": 4,
+  "proxy": "",
+  "keys": [],
+  "artistId": -1,
+  "artistEdits": {},
+  "mode": "auto",
+  "modes": {
+    "illustration": {
+      "artistId": -1,
+      "width": 832,
+      "height": 1216,
+      "steps": 28,
+      "scale": 5,
+      "ucPreset": 3,
+      "maxImagesPerCall": 4,
+      "model": "nai-diffusion-5-full",
+      "sampler": "k_euler_ancestral",
+      "negativePrompt": "",
+      "recipe": {
+        "color": "full",
+        "pages": "4",
+        "pacing": "daily",
+        "margin": "closed",
+        "bubble": "on",
+        "dialogue": "zh"
+      }
+    },
+    "comic": {
+      "artistId": -1,
+      "width": 832,
+      "height": 1216,
+      "steps": 28,
+      "scale": 7,
+      "ucPreset": 3,
+      "maxImagesPerCall": 4,
+      "model": "nai-diffusion-5-full",
+      "sampler": "k_euler_ancestral",
+      "negativePrompt": "",
+      "recipe": {
+        "color": "mono",
+        "pages": "auto",
+        "pacing": "daily",
+        "margin": "closed",
+        "bubble": "on",
+        "dialogue": "zh"
+      }
+    }
+  },
+  "autoGenerate": false,
+  "keepImages": 500,
+  "displayWidth": 60,
+  "displayMaxHeight": 0,
+  "displayClickZoom": true
+}
