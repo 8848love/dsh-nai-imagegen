@@ -1,0 +1,7 @@
+# 源码一律 LF：测试里有跨行源码断言，CRLF 检出会让它们对不上。
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.ico binary
